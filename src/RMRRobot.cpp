@@ -2,6 +2,7 @@
 #include "RMRDrive.h"
 #include "RMRLoader.h"
 #include "RMRPneumatics.h"
+#include "RMRCapturer.h"
 #include <iostream>
 #include <string>
 
@@ -19,7 +20,9 @@ RMRRobot::RMRRobot()
 	m_driveComponent = driveComponent;
 	//rmr::Loader *loaderComponent = new rmr::Loader();
 	//rmr::Pneumatic *pneumaticComponent = new rmr::Pneumatic();
+	rmr::Capturer *capturerComponent = new rmr::Capturer();
 	m_components.push_back(driveComponent);
+	m_components.push_back(capturerComponent);
 	//m_components.push_back(loaderComponent);
 	//m_components.push_back(pneumaticComponent);
 }
